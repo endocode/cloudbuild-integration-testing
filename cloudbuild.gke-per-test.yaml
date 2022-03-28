@@ -22,8 +22,7 @@ steps:
     - |
       # capture the cluster name to be created
       # (it will be used again for the deletion)
-      echo "test-$(date +%s)" > _cluster-name
-      gcloud container clusters create $(cat _cluster-name)
+      gcloud container clusters create $CLOUDSDK_CONTAINER_CLUSTER
   waitFor: ['-'] # start immediately
 
 - id: 'compile web app'
