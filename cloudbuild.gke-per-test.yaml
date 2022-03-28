@@ -134,7 +134,7 @@ steps:
   args: 
   - '-c'
   - |
-    gcloud container clusters delete $(cat _cluster-name) --quiet # don't prompt for confirmation
+    gcloud container clusters delete $_CLOUDSDK_CONTAINER_CLUSTER --quiet # don't prompt for confirmation
   waitFor: ['integration tests']
 
 options:
