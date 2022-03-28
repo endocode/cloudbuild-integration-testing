@@ -22,7 +22,7 @@ steps:
     - |
       # capture the cluster name to be created
       # (it will be used again for the deletion)
-      gcloud container clusters create $CLOUDSDK_CONTAINER_CLUSTER
+      gcloud container clusters create $_CLOUDSDK_CONTAINER_CLUSTER
   waitFor: ['-'] # start immediately
 
 - id: 'compile web app'
